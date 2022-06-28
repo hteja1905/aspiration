@@ -49,6 +49,10 @@ func (t *SkipString) GetValueAsRuneSlice() []rune {
 	return []rune(t.s)
 }
 
+func (t SkipString) String() string {
+	return fmt.Sprintf("%v", t.s)
+}
+
 func main() {
 	s := NewSkipString(3, "Aspiration.com")
 	MapString(&s)
